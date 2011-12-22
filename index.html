@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The 1140px Grid &middot; Fluid down to mobile</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- 1140px Grid styles for IE -->
+  <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+  <!-- The 1140px Grid - http://cssgrid.net/ -->
+  <link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+  
+  <!-- Your styles -->
+  <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" />
+  
+  <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+  <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+  <script type="text/javascript" src="js/modernizr-2.0.6.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript">
+    (function ($) {
+      var resizeTop, $top;
+
+      resizeTop = function ($win, $top) {
+        $win.resize(function () {
+          var $this = $(this),
+              h = $this.height();
+              $top.css({height: h});
+        });
+      };
+
+      $(function () {
+      var $win = $(window),
+          h = $win.height();
+
+          $top = $('#top');
+          $top.css({height: h});
+
+          resizeTop($win, $top);
+      });
+    }(jQuery));
+  </script>
+  
+  <!--Delete embedded styles, just for example.-->
+  <style type="text/css">
+  
+    body {
+      background: #eee;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .r-img {
+      background: none !important
+      width: auto !important
+      height: auto !important
+    }
+    .r-img img {
+      max-width: 100%
+    }
+    #top {
+      display: inline-block;
+      height: 100%;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+    #top table {
+      height: 100%;
+      padding: 40px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="top">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <div class="r-img logo">
+            <img src="logo.png" alt="unwise" />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
