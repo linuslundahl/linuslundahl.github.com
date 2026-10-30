@@ -1,23 +1,178 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
+<!--
+                                                   000
+                                                   000
+
+  00000    000    000000000     000    000    000  000     000         0000000
+  0 000    0000   0000000000    000    000    000  0000    0000       0000 0000
+    000    000    000    000    0000   0000   00000000     000000    000    000
+    000    000    000    000   00000   0000   0000 000    000 0000   0000000000
+    000    000   0000    000   00000   0000   000  000    00   000   00000000
+    0000 00000  00000    000  000 00000000000000   00 000 00000000  00000     000
+     000000 00000000     000000   00000  00000      0 000 00000000000  000000000
+
+  "We are all part of the same compost heap."
+-->
+
 <head>
   <meta charset="utf-8" />
-  <title>unwise</title>
+  <title>UNWISE - Linus Lundahl - GitHub projects</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" />
+
+  <meta name="description" content="Linus Lundahl - Developer - GitHub projects">
+  <meta name="keywords" content="Linus Lundahl, Developer, GitHub, projects">
+  <meta name="author" content="Linus Lundahl">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- HTML in your document's head -->
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+  <style>
+    /* CSS */
+    :root {
+      font-family: Inter, sans-serif;
+      font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    }
+
+    @supports (font-variation-settings: normal) {
+      :root { font-family: InterVariable, sans-serif; }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translate(-10px, 0px);
+        opacity: 0;
+      }
+      100% {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    body {
+      background-color: #eee;
+      color: #222;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 2px;
+      line-height: 1;
+      padding: 1.25rem;
+    }
+
+    h1 {
+      display: inline-block;
+      max-width: 120px;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    ul {
+      /* display: inline; */
+      margin: 2rem 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      margin: 0.75rem 0;
+      padding: 0;
+    }
+
+    a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    a::after {
+      content: '->';
+      opacity: 0;
+      transform: translate(-10px, 0);
+      display: inline-block;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+      color: #222;
+    }
+
+    a:hover::after {
+      animation: slideIn 0.5s ease-out 0s 1 normal both;
+    }
+
+    .description {
+      text-transform: uppercase;
+    }
+
+    .projects a {
+      color: #F6C90E;
+      text-transform: none;
+    }
+
+    .links a {
+      color: #4f7464;
+    }
+
+    @media (min-width: 400px) {
+      body {
+        font-size: 2rem;
+        padding: 2rem;
+      }
+
+      h1 {
+        max-width: 160px;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #222;
+        color: #eee;
+      }
+
+      svg path {
+        fill: #eee;
+      }
+
+      a:hover::after {
+        color: #eee;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <h1>
+    <svg width="1176" height="211" viewBox="0 0 1176 211" xmlns="http://www.w3.org/2000/svg">
+      <path d="M35.008 201.392c-11.04-6.144-19.584-14.544-25.632-25.2C3.328 165.536.304 153.584.304 140.336V4.688h35.712v135.648c0 6.336 1.584 12.288 4.752 17.856 3.168 5.568 7.584 9.984 13.248 13.248 5.664 3.264 12.144 4.896 19.44 4.896 7.296 0 13.776-1.632 19.44-4.896 5.664-3.264 10.08-7.68 13.248-13.248 3.168-5.568 4.752-11.52 4.752-17.856V4.688h35.712v135.648c0 13.248-3.024 25.2-9.072 35.856-6.048 10.656-14.592 19.056-25.632 25.2-11.04 6.144-23.856 9.216-38.448 9.216-14.592 0-27.408-3.072-38.448-9.216zM389.392 4.688v205.344h-.576L260.944 83.024V206h-35.712V.368h.576l127.872 126.72V4.688h35.712zm324.864 0L618.928 210.32h-.576l-42.048-90.72-42.048 90.72h-.576L438.352 4.688h38.88l57.024 123.84 23.04-49.824-34.272-74.016h38.88l14.688 31.968L591.28 4.688h38.304L595.6 77.84l23.328 50.688 57.024-123.84h38.304zm48.96-.288h35.712V206h-35.712V4.4zm111.168 167.904h60.768c7.488 0 13.728-2.352 18.72-7.056 4.992-4.704 7.488-10.704 7.488-18 0-7.296-2.496-13.296-7.488-18-4.992-4.704-11.232-7.056-18.72-7.056h-7.488c-11.136 0-21.456-2.544-30.96-7.632-9.504-5.088-17.04-12.144-22.608-21.168-5.568-9.024-8.352-19.008-8.352-29.952 0-10.944 2.784-20.928 8.352-29.952 5.568-9.024 13.104-16.08 22.608-21.168 9.504-5.088 19.824-7.632 30.96-7.632h60.768v33.696h-60.768c-7.488 0-13.728 2.352-18.72 7.056-4.992 4.704-7.488 10.704-7.488 18 0 7.296 2.496 13.296 7.488 18 4.992 4.704 11.232 7.056 18.72 7.056h7.488c11.136 0 21.456 2.544 30.96 7.632 9.504 5.088 17.04 12.144 22.608 21.168 5.568 9.024 8.352 19.008 8.352 29.952 0 10.944-2.784 20.928-8.352 29.952-5.568 9.024-13.104 16.08-22.608 21.168-9.504 5.088-19.824 7.632-30.96 7.632h-60.768v-33.696zM1099.6 38.384v50.112h75.744v33.696H1099.6v50.112h75.744V206h-111.456V4.688h111.456v33.696H1099.6z" fill="#222" fill-rule="evenodd"/>
+    </svg>
+  </h1>
 
-<div class="wrapper">
-  <img src="logo.svg" alt="unwise" />
-
-  <ul>
-    <li><a href="http://unwi.se/">unwi.se</a></li>
-    <li><a href="http://linuslundahl.github.io/GifScratcher">GifScratcher</a></li>
-    <li><a href="http://linuslundahl.github.io/TwentyTwoSpotify">TwentyTwoSpotify</a></li>
+  <ul class="description">
+    <li>Linus Lundahl</li>
+    <li>Developer</li>
+    <li>Malmö, Sweden</li>
   </ul>
-</div>
+
+  <ul class="projects">
+    <li><a href="https://linuslundahl.github.io/GifScratcher">GifScratcher</a></li>
+    <li><a href="https://github.com/linuslundahl/malmo-ff-raycast-extension">Malmö FF - Raycast Extension</a></li>
+    <li><a href="https://github.com/linuslundahl/Floating-Toasters-Screensaver">Flying Toasters Screensaver</a></li>
+  </ul>
+
+  <ul class="links">
+    <li><a href="https://github.com/linuslundahl">GitHub</a></li>
+    <li><a href="https://unwi.se">UNWI.SE</a></li>
+  </ul>
 
 </body>
 </html>
